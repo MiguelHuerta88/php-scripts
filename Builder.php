@@ -390,7 +390,7 @@ class Builder implements BuilderInterface
 	$collection = array();
 
 	// get the class that we should build our collection for
-	$class = get_called_class();
+	$class = get_lass($this);
 	
 	return $stmt->fetchAll(PDO::FETCH_CLASS, "$class");
     }
