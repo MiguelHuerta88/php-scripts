@@ -11,6 +11,13 @@ include_once("BuilderInterface.php");
  */
 class Builder implements BuilderInterface
 {
+    /**
+     * attribute array used for update or save calls
+     *
+     * @var array $attributes
+     */
+    protected $attributes = array();
+
     /** 
      * connection variable
      * 
@@ -166,12 +173,34 @@ class Builder implements BuilderInterface
     /**
      * find function
      * 
-     * @param int id
+     * @param int|array id
      * 
      * @return
      */
     public function find($id)
     {
+        // if we are passed an array
+        if(is_array($id)) {
+            $this->sql .= " WHERE id IN(";
+            $first = true;
+            foreach($id as $item) {
+                if($first) {
+                    $first = false;
+                    $this->sql .= "?";
+                } else {
+                    $this->sql .= ",?";
+                }
+                array_push($this->pdoValues, $item);
+            }
+            $this->sql .= ")";
+
+            // change whereUsed
+            $this->whereUsed = true;
+
+            return $this->get();
+        }
+
+        // if an int was passed
         if(is_int($id)) {
             // append to sql.
             $this->sql .= " WHERE id = ?";
@@ -179,8 +208,9 @@ class Builder implements BuilderInterface
 
             // change whereUsed
             $this->whereUsed = true;
+
+            return $this->getRow();
         }
-        return $this->getRow();
     }
 
     /**
@@ -200,7 +230,7 @@ class Builder implements BuilderInterface
         $this->setWhere();
 
         // begin to build where clause
-        $this->sql .= $column . $operator . "?";
+        $this->sql .= $column . " ". $operator ." " . "?";
         array_push($this->pdoValues, $value);
         return $this;
     }
@@ -271,7 +301,7 @@ class Builder implements BuilderInterface
         $this->setWhere(" OR ");
 
         // begin to build where clause
-        $this->sql .= $column . $operator . "?";
+        $this->sql .= $column . " ". $operator . " " . "?";
         array_push($this->pdoValues, $value);
         return $this;
     }
@@ -390,8 +420,8 @@ class Builder implements BuilderInterface
 	$collection = array();
 
 	// get the class that we should build our collection for
-	$class = get_lass($this);
-	
+	$class = get_class($this);
+
 	return $stmt->fetchAll(PDO::FETCH_CLASS, "$class");
     }
 
@@ -444,7 +474,7 @@ class Builder implements BuilderInterface
                 $reply = "We could not update your data into table";
                 return [false, $reply];
         }
-        return [true, 'We Successfully updated the category text.'];
+        return [true, 'We Successfully updated the data.'];
 
     }
 
@@ -479,7 +509,7 @@ class Builder implements BuilderInterface
                 $reply = "We could not insert your data into table";
                 return [false, $reply];
         }
-        return [true, 'We Successfully inserted your category text.'];
+        return [true, 'We Successfully inserted your data.'];
     }
 
     /**
@@ -602,12 +632,12 @@ class Builder implements BuilderInterface
         
         // create stmt and prepare it and return back array
         $stmt = $this->connection->prepare($this->sql);
-        
+
         $stmt->execute($this->pdoValues);
 
-	// reset all variables
-	$this->resetVariables();
-        
+        // reset all variables
+        $this->resetVariables();
+
         return [$stmt, $stmt->rowCount()];
     }
 
@@ -618,29 +648,30 @@ class Builder implements BuilderInterface
       */
     protected function resetVariables()
     {
-	// reset sql
-	$this->sql = null;
+        // reset sql
+        $this->sql = null;
 
-	// reset where used
-	$this->whereUsed = false;
+        // reset where used
+        $this->whereUsed = false;
 
-	// reset nested where
-	$this->nestedWhere = false;
+        // reset nested where
+        $this->nestedWhere = false;
 
-	// reset is start nested where
-	$this->isStartNestedWhere = false;
+        // reset is start nested where
+        $this->isStartNestedWhere = false;
 
-	// reset isCount
-	$this->isCount = false;
+        // reset isCount
+        $this->isCount = false;
 
-	// reset sort used
-	$this->sortUsed = false;
+        // reset sort used
+        $this->sortUsed = false;
 
-	// reset is select used
-	$this->isSelectUsed = false;
+        // reset is select used
+        $this->isSelectUsed = false;
 
-	// reset pdoValues
-	$this->pdoValues = array();
+        // reset pdoValues
+        $this->pdoValues = array();
+
     }
 
     /**
@@ -727,6 +758,39 @@ class Builder implements BuilderInterface
         $count = $response['count'];
 
         return $count > 0 ? $stmt->fetchAll() : array();
+    }
+
+    /**
+     * magic __set function.
+     *
+     * @param $name
+     * $param $value
+     *
+     * @return void
+     */
+    protected function __set($name, $value)
+    {
+        // set the attribute for the value
+        $this->attributes[$name] = $value;
+    }
+
+    /**
+     * Save function.
+     *
+     * @return array
+     */
+    public function save()
+    {
+        // save can be called on either new models or when we retrieve by id.
+        if(isset($this->attributes[$this->primaryColumn]) && $this->find((int)$this->attributes[$this->primaryColumn]))
+        {
+            // update
+            // @note figure out why this give us back cannot update data but the DB
+            // has updated data
+            return $this->update($this->attributes);
+        }
+        // else we didn't find a matching model which means user wants to insert
+        return $this->insert($this->attributes);
     }
 }
 

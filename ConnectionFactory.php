@@ -12,7 +12,7 @@ class ConnectionFactory
      * 
      * @var string
      */
-    public static $filepath = "/Applications/MAMP/htdocs/ORM/pdo_config.xml";
+    public static $filepath = "/Applications/MAMP/htdocs/orm_update/php-scripts/pdo_config.xml";
     
     /**
      * function to connect to our PDO.
@@ -30,7 +30,7 @@ class ConnectionFactory
         
         // try to load the xml
         $xml = simplexml_load_file(self::$filepath);
-        
+
         // pull the data and store it
         $driver = $xml->driver;
         $host = $xml->host;
