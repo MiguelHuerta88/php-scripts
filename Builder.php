@@ -3,13 +3,13 @@
 // include the ConnectionFactory
 include_once("ConnectionFactory.php");
 include_once("BuilderInterface.php");
-
+include_once("BuilderFacade.php");
 /**
  * Builder class. That will house all of our CRUD functions for our DB
  * 
  * @author Miguel Huerta<miguel.huerta@internetbrands.com>
  */
-class Builder implements BuilderInterface
+class Builder extends BuilderFacade implements BuilderInterface
 {
     /**
      * attribute array used for update or save calls
@@ -118,7 +118,7 @@ class Builder implements BuilderInterface
      * 
      * @return
      */
-    public function getRow($execute = true)
+    protected function getRow($execute = true)
     {
         $records = $this->limit(1)->get();
 
@@ -135,7 +135,7 @@ class Builder implements BuilderInterface
      * 
      * @return
      */
-    public function get($execute = true)
+    protected function get($execute = true)
     {
         // check that we have started the sql
         if(!$this->sql) {
@@ -159,7 +159,7 @@ class Builder implements BuilderInterface
      * 
      * @return void
      */
-    public function select($column = "*")
+    protected function select($column = "*")
     {
         // if we have something begin to build the sql
         if($column) {
@@ -177,7 +177,7 @@ class Builder implements BuilderInterface
      * 
      * @return
      */
-    public function find($id)
+    protected function find($id)
     {
         // if we are passed an array
         if(is_array($id)) {
@@ -222,7 +222,7 @@ class Builder implements BuilderInterface
      * 
      * @return
      */
-    public function where(
+    protected function where(
             $column = '',
             $operator = '=',
             $value = null
@@ -242,7 +242,7 @@ class Builder implements BuilderInterface
       *
       * return
       */
-    public function whereNull($column)
+    protected function whereNull($column)
     {
         $this->setWhere();
         $this->sql .= $column . " IS NULL ";
@@ -275,7 +275,7 @@ class Builder implements BuilderInterface
       *
       * @return
       */
-    public function whereNotNull($column)
+    protected function whereNotNull($column)
     {
         // call function to check how to set where up
         $this->setWhere();
@@ -443,7 +443,7 @@ class Builder implements BuilderInterface
       *
       * @return array
       */
-    public function update($fields)
+    protected function update($fields)
     {
         // before we do anything we check that they have a fillable array set.
         if(empty($this->fillable))
@@ -485,7 +485,7 @@ class Builder implements BuilderInterface
       *
       * @return array
       */
-    public function insert($fields)
+    protected function insert($fields)
     {
         // before we do anything we check that they have a fillable array set.
         if(empty($this->fillable))
@@ -596,7 +596,7 @@ class Builder implements BuilderInterface
       *
       * @returnn array
       */
-    public function delete($id)
+    protected function delete($id)
     {
         // begin to build our query;
         $this->sql = "DELETE FROM " . $this->table_name . " WHERE " . $this->primaryColumn . " = ? ;";
@@ -704,7 +704,7 @@ class Builder implements BuilderInterface
      * @param $operator
      * @param $fieldTwo
      */
-    public function join(
+    protected function join(
         $joinTable,
         $fieldOne,
         $operator = '=',
@@ -724,7 +724,7 @@ class Builder implements BuilderInterface
       */
     public function orderBy($column = 'id', $sortType = 'asc')
     {
-        if(!$sortUsed) {
+        if(!$this->sortUsed) {
                 $this->sortUsed = true;
 
                 // append to the sql
@@ -791,6 +791,24 @@ class Builder implements BuilderInterface
         }
         // else we didn't find a matching model which means user wants to insert
         return $this->insert($this->attributes);
+    }
+
+    /**
+     * Magic method
+     *
+     * @param $name
+     * @param $arguments
+     * @return mixed
+     */
+    public function __call($name, $arguments)
+    {
+        // TODO: Implement __call() method.
+        // check if the function exists
+        if(method_exists($this, $name)) {
+            return call_user_func_array([$this, $name], $arguments);
+        }
+        var_dump("Method: " . $name . " does not exist");
+        exit();
     }
 }
 

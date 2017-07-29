@@ -12,28 +12,28 @@ interface BuilderInterface
      * 
      * @param type $execute
      */
-    public function getRow($execute = true);
+    //public function getRow($execute = true);
     
     /**
      * Get all rows function
      * 
      * @param type $execute
      */
-    public function get($execute = true);
+    //public function get($execute = true);
     
     /**
      * Select function
      * 
      * @param type $column
      */
-    public function select($column = "*");
+    //public function select($column = "*");
     
     /**
      * Find function.
      * 
      * @param type $id
      */
-    public function find($id);
+    //public function find($id);
     
     
     /**
@@ -45,11 +45,11 @@ interface BuilderInterface
      * 
      * @return
      */
-    public function where(
+    /*public function where(
             $column = '',
             $operator = '=',
             $value = null
-    );
+    );*/
     
     /**
       * Where NULL function.
@@ -58,7 +58,7 @@ interface BuilderInterface
       *
       * return
       */
-    public function whereNull($column);
+    //public function whereNull($column);
     
     /**
       * common function to try to remove duplicate logic in every where function
@@ -75,7 +75,7 @@ interface BuilderInterface
       *
       * @return
       */
-    public function whereNotNull($column);
+    //public function whereNotNull($column);
     
     /**
       * orWhere function
@@ -130,7 +130,7 @@ interface BuilderInterface
       *
       * @return array
       */
-    public function update($fields);
+    //public function update($fields);
     
     /**
       * Insert function.
@@ -139,7 +139,7 @@ interface BuilderInterface
       *
       * @return array
       */
-    public function insert($fields);
+    //public function insert($fields);
     
     /**
       * Delete function
@@ -148,7 +148,7 @@ interface BuilderInterface
       *
       * @returnn array
       */
-    public function delete($id);
+    //public function delete($id);
     
     /**
      * inner join
@@ -158,12 +158,12 @@ interface BuilderInterface
      * @param $operator
      * @param $fieldTwo
      */
-    public function join(
+    /*public function join(
         $joinTable,
         $fieldOne,
         $operator = '=',
         $fieldTwo
-    );
+    );*/
     
     /**
       * Order by function
