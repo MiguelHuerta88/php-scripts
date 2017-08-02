@@ -8,6 +8,15 @@
  */
 abstract class Facade
 {
+    public static function getFacadeAccessor(){
+        print_r(
+            [
+                'error' => 'Cannot call method in Base Class'
+            ]
+        );
+        exit();
+    }
+
     public static function __callStatic($method, $args)
     {
         $instance = new static();
@@ -15,7 +24,13 @@ abstract class Facade
         if(method_exists($instance, $method)) {
             return call_user_func_array([$instance, $method], $args);
         }
-        var_dump("Method:" . $method . " could not be found");
+        print_r(
+            [
+                'error_found' => 'Found inside __callStatic',
+                'message' => "Method: " . $method . " could not be found",
+                'called_in' => static::class,
+            ]
+        );
         exit();
     }
 }
