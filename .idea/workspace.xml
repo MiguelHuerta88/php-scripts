@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3a7885b-993d-45ed-9def-5d8febf16472" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BaseBuilder.php" afterPath="$PROJECT_DIR$/BaseBuilder.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder.php" afterPath="$PROJECT_DIR$/Builder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Facade.php" afterPath="$PROJECT_DIR$/Facade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,25 +57,25 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+                <state relative-caret-position="345">
+                  <caret line="23" column="53" lean-forward="true" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="BaseBuilder.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="BaseBuilder.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/BaseBuilder.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-9362">
-                  <caret line="116" column="53" lean-forward="true" selection-start-line="116" selection-start-column="53" selection-end-line="116" selection-end-column="53" />
+                <state relative-caret-position="8401">
+                  <caret line="658" column="23" lean-forward="false" selection-start-line="658" selection-start-column="23" selection-end-line="658" selection-end-column="23" />
                   <folding>
-                    <marker date="1501642658000" expanded="true" signature="8428:8458" ph="SELECT COUNT... " />
-                    <marker date="1501642658000" expanded="true" signature="14102:14114" ph="INSERT INTO ${$this-&gt;table_name}... " />
-                    <marker date="1501642658000" expanded="true" signature="15209:15285" ph="DELETE FROM " />
+                    <marker date="1501646708000" expanded="true" signature="8599:8629" ph="SELECT COUNT... " />
+                    <marker date="1501646708000" expanded="true" signature="14273:14285" ph="INSERT INTO ${$this-&gt;table_name}... " />
+                    <marker date="1501646708000" expanded="true" signature="15380:15456" ph="DELETE FROM " />
                   </folding>
                 </state>
               </provider>
@@ -98,8 +98,8 @@
           <file leaf-file-name="Builder.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Builder.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+                <state relative-caret-position="-15">
+                  <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
                   <folding />
                 </state>
               </provider>
@@ -141,6 +141,7 @@
       <find>get</find>
       <find>FIND</find>
       <find>find</find>
+      <find>raw</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -157,10 +158,10 @@
         <option value="$PROJECT_DIR$/BaseBuilderInterface.php" />
         <option value="$PROJECT_DIR$/BuilderFacade.php" />
         <option value="$PROJECT_DIR$/BuilderInterface.php" />
-        <option value="$PROJECT_DIR$/Builder.php" />
-        <option value="$PROJECT_DIR$/BaseBuilder.php" />
         <option value="$PROJECT_DIR$/Facade.php" />
+        <option value="$PROJECT_DIR$/BaseBuilder.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/Builder.php" />
       </list>
     </option>
   </component>
@@ -293,15 +294,15 @@
       <updated>1500069502856</updated>
       <workItem from="1500069505355" duration="11433000" />
       <workItem from="1500604539744" duration="1803000" />
-      <workItem from="1501297398778" duration="8462000" />
+      <workItem from="1501297398778" duration="11315000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21698000" />
+    <option name="totallyTimeSpent" value="24551000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1420" height="805" extended-state="0" />
+    <frame x="0" y="23" width="1420" height="805" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -504,14 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BuilderFacade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -530,20 +523,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BaseBuilder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9362">
-          <caret line="116" column="53" lean-forward="true" selection-start-line="116" selection-start-column="53" selection-end-line="116" selection-end-column="53" />
+        <state relative-caret-position="8401">
+          <caret line="658" column="23" lean-forward="false" selection-start-line="658" selection-start-column="23" selection-end-line="658" selection-end-column="23" />
           <folding>
-            <marker date="1501642658000" expanded="true" signature="8428:8458" ph="SELECT COUNT... " />
-            <marker date="1501642658000" expanded="true" signature="14102:14114" ph="INSERT INTO ${$this-&gt;table_name}... " />
-            <marker date="1501642658000" expanded="true" signature="15209:15285" ph="DELETE FROM " />
+            <marker date="1501646708000" expanded="true" signature="8599:8629" ph="SELECT COUNT... " />
+            <marker date="1501646708000" expanded="true" signature="14273:14285" ph="INSERT INTO ${$this-&gt;table_name}... " />
+            <marker date="1501646708000" expanded="true" signature="15380:15456" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Builder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+        <state relative-caret-position="165">
+          <caret line="11" column="69" lean-forward="false" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="53" lean-forward="true" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
           <folding />
         </state>
       </provider>

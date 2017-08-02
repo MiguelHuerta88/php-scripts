@@ -130,13 +130,23 @@ abstract class BaseBuilder extends BuilderFacade
      */
     protected function getRow($execute = true)
     {
-        $records = $this->limit(1)->get();
+        $records = $this->limit(1)->get($execute);
 
         if(is_array($records) && count($records) > 0) {
             // return first element as object
             return array_shift($records);
         }
         return null;
+    }
+
+    /**
+     * All function
+     *
+     * @return Collection
+     */
+    protected function all($execute = true)
+    {
+        return $this->get($execute);
     }
 
     /**

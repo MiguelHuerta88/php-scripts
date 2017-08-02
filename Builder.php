@@ -16,10 +16,30 @@ class Builder extends BaseBuilder
      *
      * @return String
      */
-    public function toRawSql()
+    public function toString()
     {
+        return $this->prepareToString();
+    }
 
-        return $this->sql;
+    /**
+     * prepare sql for toString
+     *
+     * @return String
+     */
+    protected function prepareToString()
+    {
+        // explode
+        $exploded = explode("?", $this->sql);
+
+        // final sql
+        $sql = '';
+
+        foreach($exploded as $index => $section)
+        {
+            $sql .= $section . $this->pdoValues[$index];
+        }
+
+        return $sql;
     }
 
     /**
