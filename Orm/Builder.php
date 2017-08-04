@@ -54,6 +54,9 @@ class Builder extends BaseBuilder
     {
         // set the attribute for the value
         $this->attributes[$name] = $value;
+
+        // set the value so we can easily retrieve it using $object->column
+        $this->$name = $value;
     }
 }
 

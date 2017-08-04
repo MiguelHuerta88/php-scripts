@@ -568,7 +568,7 @@ abstract class BaseBuilder extends BuilderFacade
                 $started = true;
                 $strFields .= $index. "= ?  ";
             }
-            array_push($this->pdoValues, $field);
+            array_push($this->pdoValues, $this->$index);
         }
         //var_dump($this->pdoValues);
         $this->sql .= $strFields . " WHERE " . $this->primaryColumn . " = ?;";
@@ -608,7 +608,7 @@ abstract class BaseBuilder extends BuilderFacade
                 $insertFields .= $index;
                 $strFields .= "? ";
             }
-            array_push($this->pdoValues, $field);
+            array_push($this->pdoValues, $this->$index);
         }
 
         // complete the finalized query
@@ -786,5 +786,26 @@ abstract class BaseBuilder extends BuilderFacade
         }
         // else we didn't find a matching model which means user wants to insert
         return $this->insert($this->attributes);
+    }
+
+    // aggregate functions
+
+    /**
+     * Max function
+     *
+     * @param $column
+     *
+     * @return $this
+     */
+    protected function max($column)
+    {
+        // check that we have started the sql
+        if(!$this->sql) {
+            $this->select("MAX($column)");
+        } elseif(!$this->isSelectUsed) {
+            $this->select("MAX($column)");
+        }
+
+        return $this->get();
     }
 }
