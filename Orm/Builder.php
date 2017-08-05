@@ -1,7 +1,8 @@
 <?php
 
 // include the ConnectionFactory
-include_once("BaseBuilder.php");
+include_once("Orm/BaseBuilder.php");
+
 /**
  * Builder class. That will house all of our CRUD functions for our DB
  * 

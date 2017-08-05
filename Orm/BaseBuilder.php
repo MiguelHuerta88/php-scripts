@@ -1,7 +1,7 @@
 <?php
 
-include_once("BuilderFacade.php");
-include_once("ConnectionFactory.php");
+include_once("Orm/BuilderFacade.php");
+include_once("Orm/ConnectionFactory.php");
 
 /**
  * Class BaseBuilder

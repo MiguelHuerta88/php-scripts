@@ -1,5 +1,5 @@
 <?php
-include_once('Builder.php');
+include_once('Orm/Builder.php');
 
 /**
  * Model class. This class will hold the main functions that a model will have.
