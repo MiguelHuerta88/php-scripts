@@ -1,3 +1,4 @@
 index.php
-MiguelModel.php
+Models/MiguelModel.php
+Models/TestModel.php
 pdo_config.xml

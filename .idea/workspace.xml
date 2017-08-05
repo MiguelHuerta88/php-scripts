@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3a7885b-993d-45ed-9def-5d8febf16472" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BuilderFacade.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/MiguelModel.php" afterPath="$PROJECT_DIR$/Models/MiguelModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/Model.php" afterPath="$PROJECT_DIR$/Models/Model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Orm/BaseBuilder.php" afterPath="$PROJECT_DIR$/Orm/BaseBuilder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Orm/Builder.php" afterPath="$PROJECT_DIR$/Orm/Builder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Orm/BuilderFacade.php" afterPath="$PROJECT_DIR$/Orm/BuilderFacade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,18 +18,38 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+            <state relative-caret-position="465">
+              <caret line="31" column="11" lean-forward="true" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MiguelModel.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Models/TestModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MiguelModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/MiguelModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+            <state relative-caret-position="105">
+              <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -42,8 +58,8 @@
       <file leaf-file-name="Model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/Model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -52,8 +68,8 @@
       <file leaf-file-name="Builder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Orm/Builder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="435">
+              <caret line="54" column="5" lean-forward="false" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -62,8 +78,8 @@
       <file leaf-file-name="BaseBuilder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Orm/BaseBuilder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="42" lean-forward="false" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+            <state relative-caret-position="220">
+              <caret line="730" column="16" lean-forward="false" selection-start-line="730" selection-start-column="12" selection-end-line="730" selection-end-column="16" />
               <folding>
                 <marker date="1501904117000" expanded="true" signature="8607:8637" ph="SELECT COUNT... " />
                 <marker date="1501904117000" expanded="true" signature="14288:14300" ph="INSERT INTO ${$this-&gt;table_name}... " />
@@ -113,6 +129,7 @@
       <find>prepare</find>
       <find>find</find>
       <find>Connection</find>
+      <find>join</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/pdo_config.xml" />
         <option value="$PROJECT_DIR$/ConnectionFactory.php" />
         <option value="$PROJECT_DIR$/BaseFacade.php" />
@@ -132,14 +148,15 @@
         <option value="$PROJECT_DIR$/Facade.php" />
         <option value="$PROJECT_DIR$/BaseBuilder.php" />
         <option value="$PROJECT_DIR$/Builder.php" />
-        <option value="$PROJECT_DIR$/Models/TestModel.php" />
         <option value="$PROJECT_DIR$/autoloader.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Orm/BuilderFacade.php" />
         <option value="$PROJECT_DIR$/Orm/BaseBuilder.php" />
-        <option value="$PROJECT_DIR$/Orm/Builder.php" />
         <option value="$PROJECT_DIR$/Models/Model.php" />
         <option value="$PROJECT_DIR$/Models/MiguelModel.php" />
+        <option value="$PROJECT_DIR$/Orm/Builder.php" />
+        <option value="$PROJECT_DIR$/Models/TestModel.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -326,12 +343,12 @@
       <updated>1500069502856</updated>
       <workItem from="1500069505355" duration="11433000" />
       <workItem from="1500604539744" duration="1803000" />
-      <workItem from="1501297398778" duration="21285000" />
+      <workItem from="1501297398778" duration="22443000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34521000" />
+    <option name="totallyTimeSpent" value="35679000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1420" height="805" extended-state="0" />
@@ -505,14 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/PDO/PDO.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -593,26 +602,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/TestModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/autoloader.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -625,10 +618,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Orm/Builder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="54" column="5" lean-forward="false" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/TestModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Orm/BaseBuilder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="42" lean-forward="false" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+        <state relative-caret-position="220">
+          <caret line="730" column="16" lean-forward="false" selection-start-line="730" selection-start-column="12" selection-end-line="730" selection-end-column="16" />
           <folding>
             <marker date="1501904117000" expanded="true" signature="8607:8637" ph="SELECT COUNT... " />
             <marker date="1501904117000" expanded="true" signature="14288:14300" ph="INSERT INTO ${$this-&gt;table_name}... " />
@@ -637,26 +646,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Orm/Builder.php">
+    <entry file="file://$PROJECT_DIR$/Models/MiguelModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/Model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="120">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/MiguelModel.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        <state relative-caret-position="465">
+          <caret line="31" column="11" lean-forward="true" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
           <folding />
         </state>
       </provider>
